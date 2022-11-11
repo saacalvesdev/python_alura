@@ -1,16 +1,26 @@
+print("*" * 33)
 print("Bem Vindo ao Jogo!")
-
+print("*" * 33)
 num_secret = 50
-chute = int(input("Digite o número secreto:\n"))
-acertou = (num_secret == chute)
+tentativas = 5
+rodada = 1
 
-print("Você digitou {}".format(chute))
+while (rodada <= tentativas):
+    print("\nTentativa {} de {}!".format(rodada, tentativas))
+    chute = int(input("Digite o número secreto:\n"))
+    acertou = (chute == num_secret)
+    chute_maior = (chute > num_secret)
+    chute_menor = (chute < num_secret)
 
-if acertou:
-    print("Você Acertou!")
-else:
-    if num_secret > chute:
-        print("Você Errou! Seu chute foi maior que o número secreto!")
-    elif num_secret < chute:
-        print("Você Errou! Seu chute foi menor que o número secreto!")
+    print("Você digitou o número {}!".format(chute))
+
+    if acertou:
+        print("Você Acertou!")
+        break
+    else:
+        if chute_maior:
+            print("Você Errou! Seu chute foi maior que o número secreto!")
+        elif chute_menor:
+            print("Você Errou! Seu chute foi menor que o número secreto!")
+    rodada = (rodada + 1)
 print("Fim do Jogo!!!")
