@@ -5,7 +5,7 @@ num_secret = 50
 tentativas = 5
 rodada = 1
 
-while (rodada <= tentativas):
+for rodada in range(1, tentativas + 1):
     print("\nTentativa {} de {}!".format(rodada, tentativas))
     chute = int(input("Digite o número secreto:\n"))
     acertou = (chute == num_secret)
@@ -22,5 +22,4 @@ while (rodada <= tentativas):
             print("Você Errou! Seu chute foi maior que o número secreto!")
         elif chute_menor:
             print("Você Errou! Seu chute foi menor que o número secreto!")
-    rodada = (rodada + 1)
 print("Fim do Jogo!!!")
