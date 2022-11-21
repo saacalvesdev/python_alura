@@ -1,13 +1,22 @@
+import random
+
 print("*" * 33)
 print("Bem Vindo ao Jogo!")
 print("*" * 33)
-num_secret = 50
+
+num_secret = random.randrange(1, 101)
 tentativas = 5
-rodada = 1
+print(num_secret)
+
 
 for rodada in range(1, tentativas + 1):
     print("\nTentativa {} de {}!".format(rodada, tentativas))
-    chute = int(input("Digite o número secreto:\n"))
+    chute = int(input("Digite um número entre 1 e 100:\n"))
+
+    if(chute < 1 or chute > 100):
+        print('Você deve digitar um número entre 1 e 100!')
+        continue
+
     acertou = (chute == num_secret)
     chute_maior = (chute > num_secret)
     chute_menor = (chute < num_secret)
