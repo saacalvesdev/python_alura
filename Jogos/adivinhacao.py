@@ -1,7 +1,7 @@
 import random
 
 print("*" * 33)
-print("Bem Vindo ao Jogo!")
+print("Bem Vindo ao Jogo de Adivinhação!")
 print("*" * 33)
 
 num_secret = random.randrange(1, 101)
