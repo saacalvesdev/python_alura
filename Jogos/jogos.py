@@ -3,7 +3,7 @@ import adivinhacao
 
 def escolhe_jogo():
     print("*" * 33)
-    print("Bem Vindo ao Jogo de Forca!")
+    print("Bem Vindo ao SacGame!")
     print("*" * 33)
 
     print('(1) Forca (2) Adivinhação')
